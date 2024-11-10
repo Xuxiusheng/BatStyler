@@ -13,9 +13,7 @@
 #### How to Start:
 
 ```bash
-cd ~/anaconda3/envs
-mkdir batstyler
-tar -xzvf batstyler.tar.gz -C ./batstyler
+conda env create -f environment.yaml
 ```
 
 #### Model Architecture
