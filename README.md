@@ -18,6 +18,12 @@ mkdir batstyler
 tar -xzvf batstyler.tar.gz -C ./batstyler
 ```
 
+#### Model Architecture
+
+```bash
+cd ./dassl/engine/batstyler
+```
+
 ### Training & Inference
 
 ```
