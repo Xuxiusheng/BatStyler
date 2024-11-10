@@ -1,6 +1,6 @@
 # BatStyler: Advancing Multi-category Style Generation for Source-free Domain Generalization
 
-![image-20241110144505396](C:\Users\xxs\AppData\Roaming\Typora\typora-user-images\image-20241110144505396.png)
+![image-20241110144505396](./images/method.jpg)
 
 ## Dataset
 
