@@ -1,0 +1,43 @@
+DATALOADER:
+  TRAIN_X:
+    BATCH_SIZE: 32
+    SAMPLER:
+      RandomSampler
+  TEST:
+    BATCH_SIZE: 100
+  NUM_WORKERS: 0
+
+DATASET:
+  NAME: DensePACS
+  SOURCE_DOMAINS: ["none"]
+  TARGET_DOMAINS: ["art_painting", "cartoon", "photo", "sketch"]
+
+INPUT:
+  SIZE: (224, 224)
+  INTERPOLATION: "bicubic"
+  PIXEL_MEAN: [0.48145466, 0.4578275, 0.40821073]
+  PIXEL_STD: [0.26862954, 0.26130258, 0.27577711]
+  TRANSFORMS: ["gaussian_noise", "random_flip", "normalize"]
+
+OPTIM:
+  NAME: "sgd"
+  LR: 0.02
+  MAX_EPOCH: 100
+  LR_SCHEDULER: "cosine"
+  WARMUP_EPOCH: 1
+  WARMUP_TYPE: "constant"
+  WARMUP_CONS_LR: 1e-5
+
+TRAIN:
+  PRINT_FREQ: 10
+
+TRAINER:
+  BATSTYLER: 
+    WEIGHT_PATH: "/home/xuxiusheng/deeplearning/weights/"
+    SEMANTICSET: "batstyler/semantics/pacs.txt"
+    CLASSDIR: "batstyler/semantics/pacs.txt"
+    N_STYLES: 100
+    STYLE_BATCH: 100
+    EPS: 1e-7
+    S: 5.0
+    M: 0.5
